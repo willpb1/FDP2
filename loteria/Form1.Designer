@@ -1,0 +1,171 @@
+﻿namespace loteria
+{
+    partial class Form1
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            txtJugada = new TextBox();
+            rbDosNumeros = new RadioButton();
+            rbUnNumero = new RadioButton();
+            btnJugar = new Button();
+            txtJugada1 = new TextBox();
+            txtJugada3 = new TextBox();
+            txtJugada2 = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            SuspendLayout();
+            // 
+            // txtJugada
+            // 
+            txtJugada.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            txtJugada.Location = new Point(192, 83);
+            txtJugada.Multiline = true;
+            txtJugada.Name = "txtJugada";
+            txtJugada.Size = new Size(141, 32);
+            txtJugada.TabIndex = 0;
+            txtJugada.TextAlign = HorizontalAlignment.Center;
+            // 
+            // rbDosNumeros
+            // 
+            rbDosNumeros.AutoSize = true;
+            rbDosNumeros.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            rbDosNumeros.Location = new Point(62, 158);
+            rbDosNumeros.Name = "rbDosNumeros";
+            rbDosNumeros.Size = new Size(122, 24);
+            rbDosNumeros.TabIndex = 1;
+            rbDosNumeros.TabStop = true;
+            rbDosNumeros.Text = "Doble Jugada";
+            rbDosNumeros.UseVisualStyleBackColor = true;
+            // 
+            // rbUnNumero
+            // 
+            rbUnNumero.AutoSize = true;
+            rbUnNumero.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            rbUnNumero.Location = new Point(250, 158);
+            rbUnNumero.Name = "rbUnNumero";
+            rbUnNumero.Size = new Size(120, 24);
+            rbUnNumero.TabIndex = 2;
+            rbUnNumero.TabStop = true;
+            rbUnNumero.Text = "Jugada Ùnica";
+            rbUnNumero.UseVisualStyleBackColor = true;
+            // 
+            // btnJugar
+            // 
+            btnJugar.BackColor = Color.Maroon;
+            btnJugar.Cursor = Cursors.Hand;
+            btnJugar.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnJugar.ForeColor = Color.White;
+            btnJugar.Location = new Point(161, 259);
+            btnJugar.Name = "btnJugar";
+            btnJugar.Size = new Size(95, 34);
+            btnJugar.TabIndex = 3;
+            btnJugar.Text = "Jugar";
+            btnJugar.UseVisualStyleBackColor = false;
+            btnJugar.Click += btnJugar_Click;
+            // 
+            // txtJugada1
+            // 
+            txtJugada1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            txtJugada1.Location = new Point(48, 202);
+            txtJugada1.Multiline = true;
+            txtJugada1.Name = "txtJugada1";
+            txtJugada1.Size = new Size(54, 23);
+            txtJugada1.TabIndex = 5;
+            // 
+            // txtJugada3
+            // 
+            txtJugada3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            txtJugada3.Location = new Point(283, 202);
+            txtJugada3.Multiline = true;
+            txtJugada3.Name = "txtJugada3";
+            txtJugada3.Size = new Size(66, 23);
+            txtJugada3.TabIndex = 6;
+            // 
+            // txtJugada2
+            // 
+            txtJugada2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            txtJugada2.Location = new Point(125, 202);
+            txtJugada2.Multiline = true;
+            txtJugada2.Name = "txtJugada2";
+            txtJugada2.Size = new Size(56, 23);
+            txtJugada2.TabIndex = 7;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(60, 94);
+            label1.Name = "label1";
+            label1.Size = new Size(121, 21);
+            label1.TabIndex = 8;
+            label1.Text = "Dinero a Jugar";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.Maroon;
+            label2.Location = new Point(113, 31);
+            label2.Name = "label2";
+            label2.Size = new Size(184, 30);
+            label2.TabIndex = 9;
+            label2.Text = "Juego de Loteria";
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(424, 343);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(txtJugada2);
+            Controls.Add(txtJugada3);
+            Controls.Add(txtJugada1);
+            Controls.Add(btnJugar);
+            Controls.Add(rbUnNumero);
+            Controls.Add(rbDosNumeros);
+            Controls.Add(txtJugada);
+            Name = "Form1";
+            Text = "Loteria";
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private TextBox txtJugada;
+        private RadioButton rbDosNumeros;
+        private RadioButton rbUnNumero;
+        private Button btnJugar;
+        private TextBox txtJugada1;
+        private TextBox txtJugada3;
+        private TextBox txtJugada2;
+        private Label label1;
+        private Label label2;
+    }
+}
