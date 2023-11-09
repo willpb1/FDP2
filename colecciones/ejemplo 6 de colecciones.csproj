@@ -1,0 +1,106 @@
+﻿// See https://aka.ms/new-console-template for more information
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+
+ using System.Collections.Generic;
+using System.Collections;
+
+  public class PruebaLinkedList
+  {
+      private static readonly string[] colores = { "negro", "amarillo","verde", "azul", "violeta", "plata" };
+      private static readonly string[] colores2 = { "oro", "blanco","café", "azul", "gris" };
+
+
+     public static void Main(string[] args)
+     {
+        LinkedList<string> lista1 = new LinkedList<string>();
+
+        foreach (string color in colores)
+        lista1.AddLast(color);
+
+       LinkedList<string> lista2 = new LinkedList<string>(colores2);
+
+       Concatenar(lista1, lista2);
+       ImprimirLista(lista1); 
+       Console.WriteLine("\nConvirtiendo las cadenas en lista1 a mayúsculas\n");
+       CadenasAMayusculas(lista1); 
+       ImprimirLista(lista1);
+    
+       Console.WriteLine("\nEliminando las cadenas entre NEGRO y CAFÉ\n");
+       EliminarElementosEntre(lista1, "NEGRO", "CAFÉ");
+    
+       ImprimirLista(lista1); 
+       ImprimirListaInversa(lista1); 
+     } 
+
+ 
+       private static void ImprimirLista<E>(LinkedList<E> lista)
+       {
+        
+         Console.WriteLine("Lista enlazada: ");
+    
+        foreach (E valor in lista)
+          Console.Write("{0} ", valor);
+     
+        Console.WriteLine();
+       } 
+
+ 
+       private static void Concatenar<E>(LinkedList<E> lista1,
+            LinkedList<E> lista2)
+       {
+   
+           foreach (E valor in lista2)
+        lista1.AddLast(valor); 
+       }
+
+
+        private static void CadenasAMayusculas(LinkedList<string> lista)
+        {
+
+           LinkedListNode<string> nodoActual = lista.First;
+
+          while (nodoActual != null )
+          {
+              
+            string color = nodoActual.Value; 
+            nodoActual.Value = color.ToUpper(); 
+
+            nodoActual = nodoActual.Next; 
+          }
+        }
+
+ 
+        private static void EliminarElementosEntre<E>(LinkedList<E> lista, E elementoInicial, E elementoFinal)
+          {
+    
+             LinkedListNode<E> nodoActual = lista.Find(elementoInicial);
+             LinkedListNode<E> nodoFinal = lista.Find(elementoFinal);
+    
+
+              while ((nodoActual.Next != null) &&
+              (nodoActual.Next != nodoFinal))
+              {
+               lista.Remove(nodoActual.Next); 
+              } 
+        } 
+
+
+             private static void ImprimirListaInversa<E>(LinkedList<E> lista)
+             {
+              
+               Console.WriteLine("Lista invertida:");
+    
+                LinkedListNode<E> nodoActual = lista.Last;
+    
+                while (nodoActual != null)
+                {
+                  
+                  Console.Write("{0} ", nodoActual.Value);
+                  nodoActual = nodoActual.Previous; 
+                } 
+    
+                 Console.WriteLine();
+             } 
+  }

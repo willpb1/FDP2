@@ -1,0 +1,71 @@
+﻿// See https://aka.ms/new-console-template for more information
+
+ using System;
+ using System.Collections;
+
+ 
+ public class UsoDeArray
+ {
+     private static int[] valoresInt = { 1, 2, 3, 4, 5, 6 };
+     private static double[] valoresDouble = { 8.4, 9.3, 0.2, 7.9, 3.4 };
+     private static int[] copiaValoresInt;
+
+  
+      public static void Main(string[] args)
+      {
+          copiaValoresInt = new int[valoresInt.Length];
+
+         Console.WriteLine("Valores iniciales del arreglo:\n");
+         ImprimirArreglos();
+
+         Array.Sort(valoresDouble);
+    
+ 
+         Array.Copy(valoresInt, copiaValoresInt, valoresInt.Length);
+    
+         Console.WriteLine("\nValores del arreglo después de Sort y Copy:\n");
+         ImprimirArreglos(); 
+         Console.WriteLine();
+    
+ 
+         int resultado = Array.BinarySearch(valoresInt, 5);
+         if (resultado >= 0)
+         Console.WriteLine("Se encontró el 5 en el elemento {0} de valoresInt",
+         resultado);
+         else
+         Console.WriteLine("No se encontró el 5 en valoresInt");
+    
+ 
+         resultado = Array.BinarySearch(valoresInt, 8763);
+         if (resultado >= 0)
+         Console.WriteLine("Se encontró el 8763 en el elemento {0} de valoresInt",
+         resultado);
+         else
+         Console.WriteLine("No se encontró el 8763 en valoresInt");
+      } 
+
+      private static void ImprimirArreglos()
+      {
+         Console.Write( "valoresDouble: " );
+
+        IEnumerator enumerador = valoresDouble.GetEnumerator();
+
+        while (enumerador.MoveNext() )
+            Console.Write(enumerador.Current + " " );
+
+         Console.Write( "\nvaloresInt: " );
+
+ 
+        enumerador = valoresInt.GetEnumerator();
+
+        while (enumerador.MoveNext() )
+           Console.Write(enumerador.Current + " " );
+
+        Console.Write( "\ncopiaValoresInt: " );
+ 
+        foreach (int elemento in copiaValoresInt )
+            Console.Write(elemento + " " );
+
+       Console.WriteLine();
+      } 
+ } 

@@ -1,0 +1,61 @@
+﻿// See https://aka.ms/new-console-template for more information
+
+using System; 
+using System.Collections;
+
+public class pruebaStrack
+{
+    public static void Main(string[] args)
+    {
+        Stack pila = new Stack();
+        bool unBooleano = true;
+        char unCaracter = '$';
+        int unEntero = 34567;
+        string unaCadena = "hola";
+
+        pila.Push(unBooleano);
+        ImprimirStack(pila);
+        pila.Push(unCaracter);
+        ImprimirStack(pila);
+        pila.Push(unEntero);
+        ImprimirStack(pila);
+        pila.Push(unaCadena);
+        ImprimirStack(pila);
+
+        Console.WriteLine("El elemento superior de la pila es {0}\n", pila.Peek() );
+
+        try
+        {
+            while (true)
+            {
+                object objetoEliminado = pila.Pop();
+                Console.WriteLine("Se sacó " + objetoEliminado);
+                ImprimirStack(pila);
+                 
+            }
+
+        } 
+        catch (InvalidOperationException excepcion)
+        {
+            
+         Console.Error.WriteLine(excepcion);
+        } 
+    } 
+       
+
+    private static void ImprimirStack(Stack pila)
+    {
+          if (pila.Count == 0)
+              Console.WriteLine("La pila está vacía\n");
+           else
+           {
+              Console.Write("La pila es: ");
+                
+              foreach (object elemento in pila)
+
+               Console.Write("{0} ", elemento);
+                
+                 Console.WriteLine("\n");
+           } 
+    } 
+}
