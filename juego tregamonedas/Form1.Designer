@@ -1,0 +1,113 @@
+﻿namespace juego_tragamonedas
+{
+    partial class Form1
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            components = new System.ComponentModel.Container();
+            imagenBox1 = new PictureBox();
+            imagenBox2 = new PictureBox();
+            imagenBox3 = new PictureBox();
+            botonGirar = new Button();
+            timer1 = new System.Windows.Forms.Timer(components);
+            ((System.ComponentModel.ISupportInitialize)imagenBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imagenBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imagenBox3).BeginInit();
+            SuspendLayout();
+            // 
+            // imagenBox1
+            // 
+            imagenBox1.BackColor = SystemColors.ControlDark;
+            imagenBox1.BackgroundImage = Properties.Resources.th__1_;
+            imagenBox1.Location = new Point(12, 117);
+            imagenBox1.Name = "imagenBox1";
+            imagenBox1.Size = new Size(100, 50);
+            imagenBox1.TabIndex = 0;
+            imagenBox1.TabStop = false;
+            imagenBox1.Click += imagenBox1_Click;
+            // 
+            // imagenBox2
+            // 
+            imagenBox2.BackgroundImage = Properties.Resources.gettyimages_1283073161_612x6121;
+            imagenBox2.Location = new Point(118, 117);
+            imagenBox2.Name = "imagenBox2";
+            imagenBox2.Size = new Size(100, 50);
+            imagenBox2.TabIndex = 1;
+            imagenBox2.TabStop = false;
+            // 
+            // imagenBox3
+            // 
+            imagenBox3.BackgroundImage = Properties.Resources.gettyimages_1283073161_612x6121;
+            imagenBox3.Location = new Point(224, 117);
+            imagenBox3.Name = "imagenBox3";
+            imagenBox3.Size = new Size(100, 50);
+            imagenBox3.TabIndex = 2;
+            imagenBox3.TabStop = false;
+            // 
+            // botonGirar
+            // 
+            botonGirar.BackColor = SystemColors.ActiveCaption;
+            botonGirar.ForeColor = SystemColors.ControlText;
+            botonGirar.Location = new Point(118, 222);
+            botonGirar.Name = "botonGirar";
+            botonGirar.Size = new Size(100, 35);
+            botonGirar.TabIndex = 3;
+            botonGirar.Text = "Girar";
+            botonGirar.UseVisualStyleBackColor = false;
+            botonGirar.Click += botonGirar_Click;
+            // 
+            // timer1
+            // 
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(341, 306);
+            Controls.Add(botonGirar);
+            Controls.Add(imagenBox3);
+            Controls.Add(imagenBox2);
+            Controls.Add(imagenBox1);
+            Name = "Form1";
+            Text = "juego";
+            ((System.ComponentModel.ISupportInitialize)imagenBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imagenBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imagenBox3).EndInit();
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private PictureBox imagenBox1;
+        private PictureBox imagenBox2;
+        private PictureBox imagenBox3;
+        private Button botonGirar;
+        private System.Windows.Forms.Timer timer1;
+    }
+}
